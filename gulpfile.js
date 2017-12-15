@@ -34,12 +34,6 @@ gulp.task('dist', function(){
     }))
 })
 
-//gulp.task('watch', function(){
-//    runSequence('build', 'buildAll', 'dist');
-//    gulp.watch('src/**/*.js', function(){
-//        runSequence('build', 'buildAll', 'dist');
-//    });
-//})
 
 gulp.task('browserSync', function() {
   browserSync.init({
