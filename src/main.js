@@ -73,23 +73,23 @@ let oMeOLife = [
 ]
 
 let imagination = [
-    "Come with me and you'll be",
-    "In a world of pure imagination",
+    "Come with me, and you'll be",
+    "in a world of pure imagination.",
     "Take a look and you'll see",
-    "Into your imagination we'll begin",
-    "With a spin traveling in",
-    "The world of my creation",
+    "into your imagination.", 
+    "We'll begin with a spin",
+    "traveling in the world of my creation.",
     "What we'll see will defy",
     "explanation.",
-    "If you want to view paradise",
-    "Simply look around and view it",
-    "Anything you want to, do it",
+    "If you want to view paradise,",
+    "simply look around and view it.",
+    "Anything you want to, do it.",
     "Want to change the world?",
-    "There's nothing to it",
+    "There's nothing to it.",
     "There is no life I know",
-    "To compare with pure imagination",
+    "to compare with pure imagination.",
     "Living there, you'll be free",
-    "If you truly wish to be."
+    "if you truly wish to be."
 ]
 
 let typeWriter = new Typewriter(imagination, document.getElementById('text'));
