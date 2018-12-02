@@ -67,7 +67,6 @@ class Typewriter {
 
 
     constructor(texts, el, errorProbability = .03) {
-
         this._texts = texts;
         this._el = el;
 
@@ -233,7 +232,7 @@ class Typewriter {
         this._el.innerHTML = this._currentText;
     }
 
-    _executeNextDelay() {
+    _executeNextDelay = () => {
         if (this._stopImmediately) {
             this._stopImmediately = false;
         } else {
@@ -242,7 +241,7 @@ class Typewriter {
                 let nextDelay = this._delaySequence.shift();
                 setTimeout(() => {
                     nextDelay.function();
-                    window.requestAnimationFrame(this._executeNextDelay());
+                    window.requestAnimationFrame(this._executeNextDelay);
                 }, nextDelay.delay);
             } else {
                 if (this._play) {

@@ -76,7 +76,7 @@ let imagination = [
     "Come with me, and you'll be",
     "in a world of pure imagination.",
     "Take a look and you'll see",
-    "into your imagination.", 
+    "into your imagination.",
     "We'll begin with a spin",
     "traveling in the world of my creation.",
     "What we'll see will defy",

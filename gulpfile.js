@@ -11,14 +11,20 @@ gulp.task('default', ['js']);
 
 gulp.task('build', function () {
     return gulp.src('src/**/*.js')
-        .pipe(babel())
+        .pipe(babel({
+            presets: ['@babel/env'],
+            plugins: ['@babel/plugin-proposal-class-properties']
+        }))
         .pipe(gulp.dest('build'));
 });
 
 gulp.task('buildAll', function(){
     return gulp.src(['src/**/!(main)*.js', 'src/main.js'])
         .pipe(concat('all.js'))    
-        .pipe(babel())
+        .pipe(babel({
+            presets: ['@babel/env'],
+            plugins: ['@babel/plugin-proposal-class-properties']
+        }))
         .pipe(gulp.dest('build'));
 })
 
@@ -44,9 +50,9 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('serve', function(){
-    runSequence('build', 'buildAll', 'dist', 'browserSync');
+    runSequence('buildAll', 'dist', 'browserSync');
     gulp.watch('src/**/*.js', function(){
-        runSequence('build', 'buildAll', 'dist')
+        runSequence('buildAll', 'dist')
     });
     gulp.watch('index.html', browserSync.reload);
     gulp.watch('css/main.css', browserSync.reload);
